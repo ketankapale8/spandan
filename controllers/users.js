@@ -27,16 +27,16 @@ export const register = async (req, res) => {
     });
 
 
-    fs.rmSync("./tmp", { recursive: true});
+    // fs.rmSync("./tmp", { recursive: true});
 
     user = await User.create({
       name,
       email,
       password, 
-      avatar: {
-        public_id: mycloud.public_id,
-        url: mycloud.secure_url,
-      },
+      // avatar: {
+      //   public_id: mycloud.public_id,
+      //   url: mycloud.secure_url,
+      // },
       otp,
       otp_expiry: new Date(Date.now() + process.env.OTP_EXPIRY * 60 * 1000),
     });
