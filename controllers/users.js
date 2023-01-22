@@ -22,9 +22,9 @@ export const register = async (req, res) => {
     }
 
     const otp = Math.floor(Math.random() * 1000000);
-    const mycloud = await cloudinary.v2.uploader.upload(avatar, {
-      folder: "backend"
-    });
+    // const mycloud = await cloudinary.v2.uploader.upload(avatar, {
+    //   folder: "backend"
+    // });
 
 
     // fs.rmSync("./tmp", { recursive: true});
