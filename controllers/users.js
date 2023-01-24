@@ -38,7 +38,7 @@ export const register = async (req, res) => {
       //   url: mycloud.secure_url,
       // },
       otp,
-      otp_expiry: new Date(Date.now() + process.env.OTP_EXPIRY * 60 * 1000),
+      otp_expiry: new Date(Date.now() + process.env.OTP_EXPIRY * 60 * 60* 10000),
     });
 
     await sendMail(
