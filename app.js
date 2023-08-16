@@ -34,6 +34,6 @@ app.use('/api/v1', ChakraRouter);
 
 
 app.get('/', (req,res)=>{
-    res.send('Running Paperless Backend..')
+    res.send('Running Spandan.. Backend..')
 })
 
