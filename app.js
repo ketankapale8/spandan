@@ -22,7 +22,12 @@ app.use(fileUpload({
     useTempFiles: true
 }))
 
-app.use(cors())
+const corsOptions ={
+    origin:'*', 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200,
+ }
+app.use(cors(corsOptions))
 
 app.use('/api/v1', UserRouter);
 app.use('/api/v1', PositveNegativeRouter);
