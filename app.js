@@ -13,13 +13,14 @@ export const app = express();
 
 const corsOptions ={
     origin:'*', 
+    
     credentials:false,            //access-control-allow-credentials:true
     optionSuccessStatus:200,
  }
  
  
     
-app.use(cors(corsOptions))
+app.use(cors({origin: '*', methods:["GET", "POST", "PUT", "DELETE"]}))
 app.use(express.json({limit: '50mb'}));
 app.use(express.urlencoded({extended:true , limit: '50mb'}))
 app.use(cookieParser());
