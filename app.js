@@ -28,6 +28,7 @@ const corsOptions ={
     optionSuccessStatus:200,
  }
 app.use(cors(corsOptions))
+console.log('rajakldjad')
 
 app.use('/api/v1', UserRouter);
 app.use('/api/v1', PositveNegativeRouter);
